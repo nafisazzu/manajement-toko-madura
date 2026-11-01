@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Toko Madura — pencatatan barang masuk dan barang keluar toko kelontong.">
+  <title>Toko Madura — Catat Barang Masuk &amp; Keluar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ===== HEADER: identitas toko + navigasi ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#beranda" class="brand" aria-label="Toko Madura, ke beranda">
+        <span class="brand-logo" aria-hidden="true">TM</span>
+        <span class="brand-text">Toko<strong>Madura</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#stok">Stok</a></li>
+          <li><a href="#barang-masuk">Barang Masuk</a></li>
+          <li><a href="#barang-keluar">Barang Keluar</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN: konten utama halaman ===== -->
+  <main>
+    <!-- Hero -->
+    <section id="beranda" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Buka 24 jam, stok tetap terkendali</p>
+          <h1>Catat barang masuk &amp; keluar Toko Madura tanpa ribet</h1>
+          <p class="lead">
+            Semua barang yang datang dari supplier dan yang terjual ke pembeli
+            tercatat di satu tempat, jadi pemilik toko tahu kapan harus kulakan lagi.
+          </p>
+          <div class="hero-actions">
+            <a href="#barang-masuk" class="btn btn--primary">Lihat Barang Masuk</a>
+            <a href="#barang-keluar" class="btn btn--ghost">Lihat Barang Keluar</a>
+          </div>
+        </div>
+
+        <!-- Ringkasan stok -->
+        <aside class="summary" aria-labelledby="judul-ringkasan">
+          <h2 id="judul-ringkasan" class="summary-title">Ringkasan minggu ini</h2>
+          <dl class="summary-grid">
+            <div class="stat">
+              <dt>Jenis barang</dt>
+              <dd>9</dd>
+            </div>
+            <div class="stat stat--masuk">
+              <dt>Total masuk</dt>
+              <dd>247</dd>
+            </div>
+            <div class="stat stat--keluar">
+              <dt>Total keluar</dt>
+              <dd>125</dd>
+            </div>
+            <div class="stat stat--warning">
+              <dt>Perlu kulakan</dt>
+              <dd>4</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Stok barang -->
+    <section id="stok" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Stok Barang</h2>
+          <p>Stok dihitung dari total barang masuk dikurangi total barang keluar.</p>
+        </header>
+        <div class="table-card">
+          <table class="table">
+            <caption class="sr-only">Daftar stok barang Toko Madura</caption>
+            <thead>
+              <tr>
+                <th scope="col">Kode</th>
+                <th scope="col">Nama Barang</th>
+                <th scope="col">Kategori</th>
+                <th scope="col">Stok</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td data-label="Kode">BRG-001</td>
+              <td data-label="Nama Barang">Beras Premium 5 kg</td>
+              <td data-label="Kategori">Sembako</td>
+              <td data-label="Stok" class="angka">6 karung</td>
+              <td data-label="Status"><span class="badge badge--aman">Aman</span></td>
+            </tr>
+            <tr>
+              <td data-label="Kode">BRG-002</td>
+              <td data-label="Nama Barang">Minyak Goreng 1 L</td>
+              <td data-label="Kategori">Sembako</td>
+              <td data-label="Stok" class="angka">4 botol</td>
+              <td data-label="Status"><span class="badge badge--menipis">Menipis</span></td>
+            </tr>
+            <tr>
+              <td data-label="Kode">BRG-003</td>
+              <td data-label="Nama Barang">Gula Pasir 1 kg</td>
+              <td data-label="Kategori">Sembako</td>
+              <td data-label="Stok" class="angka">14 bungkus</td>
+              <td data-label="Status"><span class="badge badge--aman">Aman</span></td>
+            </tr>
+            <tr>
+              <td data-label="Kode">BRG-004</td>
+              <td data-label="Nama Barang">Telur Ayam</td>
+              <td data-label="Kategori">Sembako</td>
+              <td data-label="Stok" class="angka">3 kg</td>
+              <td data-label="Status"><span class="badge badge--menipis">Menipis</span></td>
+            </tr>
+            <tr>
+              <td data-label="Kode">BRG-005</td>
+              <td data-label="Nama Barang">Mi Instan Goreng</td>
+              <td data-label="Kategori">Makanan</td>
+              <td data-label="Stok" class="angka">45 bungkus</td>
+              <td data-label="Status"><span class="badge badge--aman">Aman</span></td>
+            </tr>
+            <tr>
+              <td data-label="Kode">BRG-006</td>
+              <td data-label="Nama Barang">Kopi Sachet</td>
+              <td data-label="Kategori">Minuman</td>
+              <td data-label="Stok" class="angka">4 renceng</td>
+              <td data-label="Status"><span class="badge badge--menipis">Menipis</span></td>
+            </tr>
+            <tr>
+              <td data-label="Kode">BRG-007</td>
+              <td data-label="Nama Barang">Air Mineral 600 ml</td>
+              <td data-label="Kategori">Minuman</td>
+              <td data-label="Stok" class="angka">18 botol</td>
+              <td data-label="Status"><span class="badge badge--aman">Aman</span></td>
+            </tr>
+            <tr>
+              <td data-label="Kode">BRG-008</td>
+              <td data-label="Nama Barang">Sabun Mandi</td>
+              <td data-label="Kategori">Kebutuhan Rumah</td>
+              <td data-label="Stok" class="angka">28 batang</td>
+              <td data-label="Status"><span class="badge badge--aman">Aman</span></td>
+            </tr>
+            <tr>
+              <td data-label="Kode">BRG-009</td>
+              <td data-label="Nama Barang">Gas LPG 3 kg</td>
+              <td data-label="Kategori">Kebutuhan Rumah</td>
+              <td data-label="Stok" class="angka">0 tabung</td>
+              <td data-label="Status"><span class="badge badge--habis">Habis</span></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barang masuk -->
+    <section id="barang-masuk" class="section section--alt">
+      <div class="container">
+        <header class="section-head">
+          <h2><span class="dot dot--masuk" aria-hidden="true"></span>Barang Masuk</h2>
+          <p>Barang yang diterima dari supplier (kulakan).</p>
+        </header>
+        <div class="table-card">
+          <table class="table">
+            <caption class="sr-only">Riwayat barang masuk</caption>
+            <thead>
+              <tr>
+                <th scope="col">Tanggal</th>
+                <th scope="col">Barang</th>
+                <th scope="col">Jumlah</th>
+                <th scope="col">Supplier</th>
+                <th scope="col">Harga Beli</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-26">26 Okt 2026</time></td>
+              <td data-label="Barang">Beras Premium 5 kg</td>
+              <td data-label="Jumlah" class="angka">+10 karung</td>
+              <td data-label="Supplier">CV Sumber Pangan</td>
+              <td data-label="Harga Beli" class="angka">Rp72.000</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-26">26 Okt 2026</time></td>
+              <td data-label="Barang">Minyak Goreng 1 L</td>
+              <td data-label="Jumlah" class="angka">+24 botol</td>
+              <td data-label="Supplier">CV Sumber Pangan</td>
+              <td data-label="Harga Beli" class="angka">Rp16.000</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-27">27 Okt 2026</time></td>
+              <td data-label="Barang">Gula Pasir 1 kg</td>
+              <td data-label="Jumlah" class="angka">+20 bungkus</td>
+              <td data-label="Supplier">Grosir Barokah</td>
+              <td data-label="Harga Beli" class="angka">Rp15.500</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-27">27 Okt 2026</time></td>
+              <td data-label="Barang">Mi Instan Goreng</td>
+              <td data-label="Jumlah" class="angka">+80 bungkus</td>
+              <td data-label="Supplier">Agen Mi Sejahtera</td>
+              <td data-label="Harga Beli" class="angka">Rp2.800</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-28">28 Okt 2026</time></td>
+              <td data-label="Barang">Kopi Sachet</td>
+              <td data-label="Jumlah" class="angka">+15 renceng</td>
+              <td data-label="Supplier">Grosir Barokah</td>
+              <td data-label="Harga Beli" class="angka">Rp12.500</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-28">28 Okt 2026</time></td>
+              <td data-label="Barang">Air Mineral 600 ml</td>
+              <td data-label="Jumlah" class="angka">+48 botol</td>
+              <td data-label="Supplier">Agen Air Segar</td>
+              <td data-label="Harga Beli" class="angka">Rp2.800</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-29">29 Okt 2026</time></td>
+              <td data-label="Barang">Gas LPG 3 kg</td>
+              <td data-label="Jumlah" class="angka">+12 tabung</td>
+              <td data-label="Supplier">Pangkalan LPG Pak Halim</td>
+              <td data-label="Harga Beli" class="angka">Rp18.000</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-30">30 Okt 2026</time></td>
+              <td data-label="Barang">Telur Ayam</td>
+              <td data-label="Jumlah" class="angka">+8 kg</td>
+              <td data-label="Supplier">Peternak Telur Lestari</td>
+              <td data-label="Harga Beli" class="angka">Rp26.000</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-30">30 Okt 2026</time></td>
+              <td data-label="Barang">Sabun Mandi</td>
+              <td data-label="Jumlah" class="angka">+30 batang</td>
+              <td data-label="Supplier">Grosir Barokah</td>
+              <td data-label="Harga Beli" class="angka">Rp3.500</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barang keluar -->
+    <section id="barang-keluar" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2><span class="dot dot--keluar" aria-hidden="true"></span>Barang Keluar</h2>
+          <p>Barang yang keluar dari toko karena terjual atau rusak.</p>
+        </header>
+        <div class="table-card">
+          <table class="table">
+            <caption class="sr-only">Riwayat barang keluar</caption>
+            <thead>
+              <tr>
+                <th scope="col">Tanggal</th>
+                <th scope="col">Barang</th>
+                <th scope="col">Jumlah</th>
+                <th scope="col">Keterangan</th>
+                <th scope="col">Harga Jual</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-27">27 Okt 2026</time></td>
+              <td data-label="Barang">Beras Premium 5 kg</td>
+              <td data-label="Jumlah" class="angka">&minus;4 karung</td>
+              <td data-label="Keterangan">Penjualan</td>
+              <td data-label="Harga Jual" class="angka">Rp78.000</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-27">27 Okt 2026</time></td>
+              <td data-label="Barang">Mi Instan Goreng</td>
+              <td data-label="Jumlah" class="angka">&minus;35 bungkus</td>
+              <td data-label="Keterangan">Penjualan</td>
+              <td data-label="Harga Jual" class="angka">Rp3.500</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-28">28 Okt 2026</time></td>
+              <td data-label="Barang">Minyak Goreng 1 L</td>
+              <td data-label="Jumlah" class="angka">&minus;20 botol</td>
+              <td data-label="Keterangan">Penjualan</td>
+              <td data-label="Harga Jual" class="angka">Rp18.000</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-28">28 Okt 2026</time></td>
+              <td data-label="Barang">Air Mineral 600 ml</td>
+              <td data-label="Jumlah" class="angka">&minus;30 botol</td>
+              <td data-label="Keterangan">Penjualan</td>
+              <td data-label="Harga Jual" class="angka">Rp4.000</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-29">29 Okt 2026</time></td>
+              <td data-label="Barang">Gas LPG 3 kg</td>
+              <td data-label="Jumlah" class="angka">&minus;12 tabung</td>
+              <td data-label="Keterangan">Penjualan</td>
+              <td data-label="Harga Jual" class="angka">Rp22.000</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-29">29 Okt 2026</time></td>
+              <td data-label="Barang">Gula Pasir 1 kg</td>
+              <td data-label="Jumlah" class="angka">&minus;6 bungkus</td>
+              <td data-label="Keterangan">Penjualan</td>
+              <td data-label="Harga Jual" class="angka">Rp17.500</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-30">30 Okt 2026</time></td>
+              <td data-label="Barang">Kopi Sachet</td>
+              <td data-label="Jumlah" class="angka">&minus;11 renceng</td>
+              <td data-label="Keterangan">Penjualan</td>
+              <td data-label="Harga Jual" class="angka">Rp15.000</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-31">31 Okt 2026</time></td>
+              <td data-label="Barang">Telur Ayam</td>
+              <td data-label="Jumlah" class="angka">&minus;5 kg</td>
+              <td data-label="Keterangan">Penjualan</td>
+              <td data-label="Harga Jual" class="angka">Rp29.000</td>
+            </tr>
+            <tr>
+              <td data-label="Tanggal"><time datetime="2026-10-31">31 Okt 2026</time></td>
+              <td data-label="Barang">Sabun Mandi</td>
+              <td data-label="Jumlah" class="angka">&minus;2 batang</td>
+              <td data-label="Keterangan">Barang rusak</td>
+              <td data-label="Harga Jual" class="angka">Rp4.500</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="section section--alt">
+      <div class="container about">
+        <article>
+          <h2>Tentang Toko Madura</h2>
+          <p>
+            Toko Madura adalah toko kelontong yang buka hampir sepanjang hari dan menjual
+            kebutuhan pokok sehari-hari. Karena barangnya banyak dan perputarannya cepat,
+            pemilik toko butuh catatan yang rapi tentang barang yang masuk dan keluar.
+          </p>
+        </article>
+        <ul class="feature-list">
+          <li><strong>Barang masuk</strong> — catat kulakan dari supplier beserta harga beli.</li>
+          <li><strong>Barang keluar</strong> — catat penjualan dan barang rusak.</li>
+          <li><strong>Stok otomatis</strong> — stok = masuk &minus; keluar, lengkap dengan status.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Toko Madura &middot; Praktikum Pemrograman Web</p>
+      <p>Dibuat oleh Nafis &middot; Teknik Informatika UMM</p>
+    </div>
+  </footer>
+</body>
+</html>
