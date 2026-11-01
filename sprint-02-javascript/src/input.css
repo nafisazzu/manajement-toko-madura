@@ -1,0 +1,28 @@
+/* Sprint 02 — Tailwind CSS (desain sama dengan Sprint 01, ditulis dengan utility class) */
+@import "tailwindcss" source("../");
+
+@theme {
+  --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+/* Komponen kecil yang dipakai berulang oleh JavaScript saat merender tabel */
+@layer components {
+  .sel {
+    @apply flex justify-between gap-4 px-4 py-1.5 text-right
+      before:font-semibold before:text-slate-500 before:content-[attr(data-label)]
+      md:table-cell md:py-3.5 md:text-left md:before:content-none;
+  }
+  .baris {
+    @apply block border-t border-slate-200 py-2 transition-colors hover:bg-slate-50 md:table-row md:py-0;
+  }
+  .badge { @apply inline-block rounded-full px-2.5 py-0.5 text-xs font-bold; }
+  .badge-aman { @apply bg-emerald-50 text-emerald-700; }
+  .badge-menipis { @apply bg-yellow-100 text-yellow-700; }
+  .badge-habis { @apply bg-red-50 text-red-600; }
+  .input {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-slate-900
+      outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200;
+  }
+}
