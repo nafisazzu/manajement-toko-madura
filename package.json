@@ -2,14 +2,14 @@
   "name": "toko-madura-web",
   "version": "1.0.0",
   "private": true,
-  "description": "Toko Madura - pencatatan barang masuk & keluar (Praktikum Pemrograman Web, Sprint 01-06)",
+  "description": "Toko Madura - pencatatan barang masuk & keluar (Praktikum Pemrograman Web, Week 2-7)",
   "scripts": {
-    "build:s2": "tailwindcss -i sprint-02-javascript/src/input.css -o sprint-02-javascript/dist/output.css --minify",
-    "build:s3": "tailwindcss -i sprint-03-api/src/input.css -o sprint-03-api/dist/output.css --minify",
-    "build:s4": "tailwindcss -i sprint-04-php/src/input.css -o sprint-04-php/dist/output.css --minify",
-    "build:s5": "tailwindcss -i sprint-05-php-oop/src/input.css -o sprint-05-php-oop/dist/output.css --minify",
-    "build:s6": "tailwindcss -i sprint-06-mvc/src/input.css -o sprint-06-mvc/public/css/output.css --minify",
-    "build": "npm run build:s2 && npm run build:s3 && npm run build:s4 && npm run build:s5 && npm run build:s6"
+    "build:week3": "tailwindcss -i week3/src/input.css -o week3/dist/output.css --minify",
+    "build:week4": "tailwindcss -i week4/src/input.css -o week4/dist/output.css --minify",
+    "build:week5": "tailwindcss -i week5/src/input.css -o week5/dist/output.css --minify",
+    "build:week6": "tailwindcss -i week6/src/input.css -o week6/dist/output.css --minify",
+    "build:week7": "tailwindcss -i week7/src/input.css -o week7/public/css/output.css --minify",
+    "build": "npm run build:week3 && npm run build:week4 && npm run build:week5 && npm run build:week6 && npm run build:week7"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.0",
